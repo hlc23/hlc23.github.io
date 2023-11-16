@@ -1,0 +1,18 @@
+baseURL = 'https://hlc23.github.io/blog/'
+languageCode = 'zh-tw'
+title = "hlc23's blog"
+theme = "hugo-theme-stack"
+
+[params.sidebar.avatar]
+src = "img/avatar.jpg"
+
+[menu]
+    [[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/hlc23"
+
+        [menu.social.params]
+        icon = "brand-github"
+
+
