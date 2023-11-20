@@ -1,10 +1,31 @@
-<span class="spoiler" >{{.Inner}}</span>
 <style>
-	.spoiler { 
-	  color: black; 
-	  background-color:black;
+	.spoiler-block {
+	  background-color: black;
+	  cursor: pointer;
 	}
-	.spoiler:checked{
+
+	.spoiler-block .spoiler-text {
+	  color: black;
+	  display: inline-block;
+	}
+
+	.unveil {
 	  color: white;
+	background-color: rgb(60, 60, 60);
+	  cursor: auto;
 	}
 </style>
+
+<script>
+	function unveil(element){
+		element.classList.add("unveil");
+		element.classList.remove("spoiler-text");
+		element.onclick = null;
+	}
+</script>
+
+<span class="spoiler-block">
+	<span class="spoiler-text" onclick=unveil(this)>
+		<span >{{ .Inner }}</span>
+	</span>
+</span>
