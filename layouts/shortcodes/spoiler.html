@@ -1,29 +1,3 @@
-<style>
-	.spoiler-block {
-	  background-color: black;
-	  cursor: pointer;
-	}
-
-	.spoiler-block .spoiler-text {
-	  color: black;
-	  display: inline-block;
-	}
-
-	.unveil {
-	  color: white;
-	background-color: rgb(60, 60, 60);
-	  cursor: auto;
-	}
-</style>
-
-<script>
-	function unveil(element){
-		element.classList.add("unveil");
-		element.classList.remove("spoiler-text");
-		element.onclick = null;
-	}
-</script>
-
 <span class="spoiler-block">
 	<span class="spoiler-text" onclick=unveil(this)>
 		<span >{{ .Inner }}</span>
