@@ -1,4 +1,4 @@
-baseURL = 'https://hlc23.github.io/blog/'
+baseURL = 'https://hlc23.github.io'
 languageCode = 'zh-tw'
 title = "hlc23's blog"
 theme = "hugo-theme-stack"
