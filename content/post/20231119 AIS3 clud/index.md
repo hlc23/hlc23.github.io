@@ -17,13 +17,13 @@ draft: false
 
 [Cybercans：資安人生物語](https://hackmd.io/@samuel-t-chou/H1lVj28T_#Cybercans%EF%BC%9A%E8%B3%87%E5%AE%89%E4%BA%BA%E7%94%9F%E7%89%A9%E8%AA%9E)
 
-![image](/20231119/cybercans.jpg)
+![image](cybercans.jpg)
 
 {{< extended 小小心得 >}}這遊戲玩起來就是看著自己不停的骰到被攻擊的格子 然後看著自己的防禦被各種打穿 開局骰第一次直接被打穿兩次 {{< /extended >}}
 
 桌遊結束後就是交流的pizza party了
 
-![image](/20231119/pizzap.jpg)
+![image](pizzap.jpg)
 
 ### Day 2
 
@@ -33,30 +33,32 @@ draft: false
 以下是writeup
 
 ### Introduction
-![image](/20231119/introduction.png)
+![image](introduction.png)
 
 ### Welcome
-![image](/20231119/welcome.png)
+![image](welcome.png)
 
 
 在respond封包裡找到flag
-![image](/20231119/welcome-2.png)
+![image](welcome-2.png)
 
 ### Never Login
-![image](/20231119/never_login.png)
-![image](/20231119/never_login-3.png)
-![image](/20231119/never_login-2.png)
+![image](never_login.png)
+
+![image](never_login-3.png)
+
+![image](never_login-2.png)
 
 html中有 JS 會阻擋密碼送出, 在設定中打開`禁用JavaScript`, 並將最下方找到的密碼送出就能拿到flag
 
 ### Who are you
-![image](/20231119/whoareyou.png)
-![image](/20231119/whoareyou-2.png)
+![image](whoareyou.png)
+![image](whoareyou-2.png)
 
 隨便填`username`然後改cookie中的`role`為`admin`就能拿到flag
 
 ### dir
-![image](/20231119/dir.png)
+![image](dir.png)
 
 使用 `dirsearch` 之類的工具可以找到這題的網頁下有兩個資料夾
 ```shell
@@ -75,7 +77,7 @@ dirsearch -u https://dir.entroy.tk --random-agent
 
 ### Image Space 0x01 
 
-![image](/20231119/upload.png)
+![image](upload.png)
 
 上傳一個web shell的檔案
 先把JS關掉以免php的檔案被擋
@@ -103,9 +105,9 @@ dirsearch -u https://dir.entroy.tk --random-agent
 最後透過 web shell 找到flag
 
 ### Boolean based SQL Injection 
-![image](/20231119/sqlib.png)
+![image](sqlib.png)
 
-![image](/20231119/sqlib2.png)
+![image](sqlib2.png)
 
 嘗試往輸入欄填入可能會造成錯誤的文字
 得到
@@ -115,12 +117,14 @@ SELECT * FROM user WHERE username =(""'") AND password = ("")
 
 嘗試 `admin")#`
 
-![image](/20231119/sqlib3.png)
+![image](sqlib3.png)
 拿到flag
 
 ### Union Select
-![image](/20231119/ubsqli.png)
-![image](/20231119/ubsqli2.png)
+![image](ubsqli.png)
+
+![image](ubsqli2.png)
+
 用`sqlmap`檢查database
 ```bash
 sqlmap https://sqli.entroy.tk/union_based_sqli.php?id=1 -p id --level 5 --risk 3 --batch --random-agent --technique BU --dbs
@@ -240,7 +244,7 @@ dirsearch -u https://target.entroy.tk/ --random-agent
 
 使用前面找到的帳密做登入
 成功進到後台
-![image](/20231119/realworld.png)
+![image](realworld.png)
 
 找地方上傳 web shell
 然後就可以RCE了
