@@ -2,8 +2,11 @@
 title: "AIS3 Club"
 date: 2023-11-21T02:06:59+08:00
 description: "2023/11/19-20"
+categories: 
+    - "Event"
+tags:
+    - "AIS3"
 draft: false
-
 ---
 
 應該是我第一次參加AIS3的實體活動, 活動共兩天

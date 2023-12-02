@@ -12,6 +12,8 @@ draft: false
 {{< spoiler >}} 差不多是學測倒數60幾天 {{< /spoiler >}} 
 
 ## Change Log
+### 2023/12/1
+- [x] add many config 
 ### 2023/11/20
 - [x] Add `spoiler` shortcode like spoiler in discord
 ### 2023/11/16
