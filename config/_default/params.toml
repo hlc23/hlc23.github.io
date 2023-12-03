@@ -24,3 +24,7 @@ type = "tag-cloud"
 
 [widgets.homepage.params]
 limit = 10
+
+[comments]
+enabled = true
+provider = "disqus"
