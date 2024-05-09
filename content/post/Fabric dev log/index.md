@@ -2,6 +2,10 @@
 title: "Fabric Dev Log"
 date: 2024-05-02T00:25:44+08:00
 draft: false
+categories: 
+    - "Log"
+tags:
+    - "Minecraft"
 ---
 
 # 從零開始的 Fabric 開發日誌
@@ -22,3 +26,16 @@ draft: false
 明天來研究一般方塊的部份
 
 - [X] 新增物品
+
+## 5/9
+ㄟ突然就 9 號了XD
+前幾天在摸 Arduino 玩 OLED 
+
+今天把方塊摸了一下
+寫 tags, loot table, block state, model 等等有夠麻煩
+之後好像能用生成的方式(?
+
+然後另一件事是, 現在會慢慢的在 [Hackmd](https://hackmd.io/@hlc23/BymXqe-z0/) 上做筆記, 寫的蠻爛的就是了
+
+- [X] 新增方塊
+
