@@ -19,6 +19,12 @@ Hi, hlc23 是我, 也可以叫我 lee
 - Backend
 - Blockchain
 
+## Techs
+
+- Python
+- Javascript
+- C/C++
+
 ## Educational Background
 
 - National Chung Hsing University Bachelor’s Degree in Computer Science and Information Engineering (2024 ~ Now)
