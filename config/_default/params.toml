@@ -1,30 +1,33 @@
-[sidebar.avatar]
-src = "img/avatar.jpg"
+# Homepage Config
+isSinglePage = true
 
-[footer]
-since = 2023
+# Meta Config
+description = "Hello"
 
-[[widgets.homepage]]
-type = "search"
+# Header Configuration
+avatar = "img/avatar.jpg"
 
-[[widgets.homepage]]
-type = "archives"
+#favicon
+favicon = "icons/favicon.ico"
 
-[widgets.homepage.params]
-limit = 5
+# disqus is a comment system. see https://disqus.com
+disqusShortname = ""
 
-[[widgets.homepage]]
-type = "categories"
+[emoji]
+enableEmoji = true
 
-[widgets.homepage.params]
-limit = 10
-
-[[widgets.homepage]]
-type = "tag-cloud"
-
-[widgets.homepage.params]
-limit = 10
-
-[comments]
-enabled = true
-provider = "disqus"
+# giscus is a comment system based on GitHub Discussions. see https://giscus.app
+[giscus]       
+    enable = false
+    repo = ""
+    repoId = ""
+    category = "Announcements"
+    categoryId = ""
+    # mapping = "pathname"  # comment value is the default value
+    # strict = 0
+    # reactionsEnabled = 1
+    # emitMetadata = 0
+    # inputPosition = "top"
+    # theme = "light"
+    # lang = "zh-CN"
+    # lazyLoading = true

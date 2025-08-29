@@ -1,0 +1,32 @@
+baseURL = 'http://hlc23.dev'
+copyright = "2025 - {year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
+languageCode = 'zh-TW'
+defaultContentLanguage = 'zh-tw'
+theme = 'enchanted-lowkey'
+title = "hlc23's blog"
+enableRobotsTXT = true
+summaryLength = 15
+pagination.pagerSize = 5
+
+[languages]
+  [languages.zh-tw]
+    languageName = "繁體中文"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    noHl = false
+    style = 'dracula'
+    tabWidth = 4

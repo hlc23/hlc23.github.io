@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="py-2 flex flex-col gap-1">
+  <h3 class="title-small">{{ .Title }}</h3>
+</div>
+
+<section>{{ .Content }}</section>
+
+<section>
+  <h3>Posts</h3>
+  <ul style="margin-left: 0px;">
+  {{ range .Site.RegularPages }}
+    <li style="list-style-type: none;">
+      <div style="font-size: 14px;">
+        <time style="margin-right: 10px;" datetime="{{ .PublishDate }}" title='{{ .PublishDate.Format "2006, Jan 2" }}'>
+          {{ .PublishDate.Format "2006/01/02" }}
+        </time>
+
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ end }}

@@ -1,0 +1,17 @@
+[latestPosts]
+    other = 'Latest posts'
+    
+[readMore]
+    other = 'Read more'
+
+[summary]
+    other = 'Summary'
+
+[estimatedReadingTime]
+    other = 'Estimated reading time: %d minutes'
+
+[404_title]
+    other = 'Page not found'
+
+[404_text]
+    other = "你肯定搞錯了什麼"
