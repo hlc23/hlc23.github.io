@@ -1,7 +1,7 @@
 ---
 title: "Syntax"
 date: 2025-08-29T03:31:45+08:00
-draft: false # Set 'false' to publish
+draft: true # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
 description: ''
 categories:
