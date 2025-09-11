@@ -6,7 +6,7 @@ draft: false
 
 ## Intro
 
-Hi, here is hlc23. Also call me Lee.
+Hi, here is hlc23. Also can call me Lee.
 
 ## Interested in
 
@@ -30,9 +30,9 @@ Hi, here is hlc23. Also call me Lee.
 - National Chung Hsing University Bachelor’s Degree in Computer Science and Information Engineering (2024 ~ Now)
 
 ## Activities
-- 教育體系資安攻防演練之攻防檢測員
+- 教育體系資安攻防演練之攻防檢測員 #14/57 (2025/8)
 - AIS3 Junior TA (2025/8)
-- SCAICT 資訊組 (2022/10~2023/9)
+- SCAICT 2nd (2022/10~2023/9)
 
 ## CTF
 - 2025 AIS3 Pre-exam #106/389
@@ -42,10 +42,11 @@ Hi, here is hlc23. Also call me Lee.
 - 112年資安系列競賽-資安技能金盾獎決賽
 
 ## Training 
-- 2025 AIS3 學員
-- 9th AIS3 台灣好厲駭 高階學員
-- 2024 AIS3 學員
+- 10th AIS3 HolyHigh Trainee 
+- 2025 AIS3 Trainee
+- 9th Taiwan HolyHigh Trainee
+- 2024 AIS3 Trainee
 
-## Context me
+## Contact me
 
 - Email: [henryleecode23@gmail.com](mailto:henryleecode23@gmail.com)
