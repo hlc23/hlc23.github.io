@@ -1,47 +1,35 @@
 [[main]]
     identifier = "home"
     name = "Home"
-    url = "/"
+    url = "/en/"
     weight = 1
 
 [[main]]
     identifier = "post"
     name = "Posts"
-    url = "/posts"
+    url = "/en/posts"
     weight = 2
 
 [[main]]
     identifier = "about"
     name = "About"
-    url = "/about"
+    url = "/en/about"
     weight = 3
 
 [[main]]
     identifier = "categories"
     name = "Categories"
-    url = "/categories"
+    url = "/en/categories"
     weight = 4
 
 [[main]]
     identifier = "tags"
     name = "Tags"
-    url = "/tags"
+    url = "/en/tags"
     weight = 5
 
 [[main]]
     identifier = "donate"
-    name = "donate"
+    name = "Donate"
     url = "https://ko-fi.com/hlc23"
     weight = 6
-
-[[social]]
-    identifier = "instagram"
-    name = "Instagram"
-    url = "https://www.instagram.com/h_lee_c23/"
-    weight = 2
-
-[[social]]
-    identifier = "github"
-    name = "GitHub"
-    url = "https://github.com/hlc23"
-    weight = 3
