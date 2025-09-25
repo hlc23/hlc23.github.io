@@ -34,3 +34,16 @@
 .spoiler-wrapper.revealed .spoiler-content {
   color: inherit;
 }
+
+/* 白色主題下，讓 revealed spoiler 文字顏色變深色 */
+@media (prefers-color-scheme: light) {
+  .spoiler-wrapper.revealed .spoiler-content {
+    color: #222;
+  }
+}
+/* 深色主題下，維持原本設計 */
+@media (prefers-color-scheme: dark) {
+  .spoiler-wrapper.revealed .spoiler-content {
+    color: #eee;
+  }
+}
