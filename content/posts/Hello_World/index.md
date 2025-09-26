@@ -21,6 +21,8 @@ tags:
 ---
 
 ## Change Log
+### 2025/09/25
+- apply spoiler effect  
 ### 2025/08/29
 - Complete some information.
 - Change theme to [Lowkey](https://github.com/nixentric/Lowkey-Hugo-Theme)
