@@ -1,0 +1,51 @@
+
+<style>
+.header {
+    position: fixed;
+    top: -60px; /* 隱藏到螢幕外 */
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease;
+    z-index: 1000;
+}
+
+/* 當滑鼠在最頂端區域時顯示 */
+body.show-header .header {
+    top: 0;
+}
+
+/* 偵測區域 (在最上方透明區域) */
+.hover-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px; /* 只要滑鼠碰到這個範圍就觸發 */
+    z-index: 2000;
+}
+</style>
+</head>
+<body>
+<div class="header">
+🌐 Sticky Foldable Header
+</div>
+<div class="hover-zone"></div>
+
+<script>
+const hoverZone = document.querySelector('.hover-zone');
+const body = document.body;
+
+hoverZone.addEventListener('mouseenter', () => {
+    body.classList.add('show-header');
+});
+
+hoverZone.addEventListener('mouseleave', () => {
+    body.classList.remove('show-header');
+});
+</script>
