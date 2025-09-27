@@ -30,7 +30,7 @@ Hi, hlc23 是我, 也可以叫我 lee
 - National Chung Hsing University Bachelor’s Degree in Computer Science and Information Engineering (2024 ~ Now)
 
 ## Activities
-- 教育體系資安攻防演練之攻防檢測員  #14/57 (2025/8)
+- 教育體系資安攻防演練之攻防檢測員  #14/57 (2025/7~ 2025/8)
 - AIS3 Junior 助教 (2025/8)
 - SCAICT 資訊組 (2022/10~2023/9)
 
@@ -40,6 +40,7 @@ Hi, hlc23 是我, 也可以叫我 lee
 - 2024 AIS3 Pre-exam
 - 2024 MyFirstCTF #88
 - 112年資安系列競賽-資安技能金盾獎決賽
+- for more, see [ctftime.org](https://ctftime.org/user/206501)
 
 ## Training 
 - 10th AIS3 好厲駭 學員
