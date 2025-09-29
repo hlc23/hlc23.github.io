@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<article class="flex flex-col gap-3">
+  <header>
+    <h2 class="title-small">{{ i18n "404_title" }}</h2>
+  </header>
+
+  <section class="flex flex-col gap-3">
+    <p>{{ i18n "404_text" }}</p>
+    <p>
+      <a class="text-primary underline" href="{{ .Site.Home.RelPermalink }}">{{ i18n "back_home" }}</a>
+    </p>
+  </section>
+</article>
+
+<script>
+// If site runs with language subpaths (e.g., /en/...), try to keep user within the same language 404.
+(function () {
+  try {
+    var path = location.pathname || "";
+    // Known language prefixes from Hugo config
+    var langs = ["/en/", "/zh-tw/"]; // adjust automatically in future if needed
+    for (var i = 0; i < langs.length; i++) {
+      var p = langs[i];
+      if (path.startsWith(p) && !path.endsWith("404.html")) {
+        var dest = p + "404.html";
+        if (location.pathname !== dest) {
+          location.replace(dest);
+        }
+        return;
+      }
+    }
+  } catch (e) {
+    // no-op
+  }
+})();
+</script>
+
+{{ end }}

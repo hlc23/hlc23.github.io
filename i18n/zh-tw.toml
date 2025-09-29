@@ -15,3 +15,6 @@
 
 [404_text]
     other = "你肯定搞錯了什麼"
+
+[back_home]
+    other = '返回首頁'
