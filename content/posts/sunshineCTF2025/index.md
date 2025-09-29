@@ -13,7 +13,7 @@ tags:
 Team: `nchu_goose`  
 Teammates: [@chen](https://ctftime.org/user/207624) [@Chao28661](https://ctftime.org/user/218204)
 
-Rank: #409 / 1376
+rk. #409 / 1376
 
 ## Misc
 ### Tribble with my Skin
@@ -21,12 +21,12 @@ Rank: #409 / 1376
 > My Minecraft account got hacked and now my skin seems to be a little off...  
 > Mind checking it out? My Minecraft username is "oatzs".
 
-It’s obvious the challenge is about the Minecraft skin of the account `oatzs`.  
-You can view this player’s skin on [skinmc.net](https://skinmc.net/profile/oatzs.1).
+很明顯題目跟 `oatzs` 這個 ID 的 Minecraft 帳號皮膚有關  
+可以在 [skinmc.net](https://skinmc.net/profile/oatzs.1) 查看這位玩家的皮膚  
 
 ![alt text](Skin_1.png)
 
-Open the online editor and you can see:
+打開線上的編輯器可以看到
 
 ![alt text](Skin_2.png)  
 
@@ -39,11 +39,11 @@ Flag: `sun{tribble_craft}`
 > I tried typing out the flag for you, but our Astronaut **Cole**son seems to have changed the terminal's keyboard layout? He went out to get a big **mak** so I guess we're screwed. Whatever, here's the flag, if you can somehow get it back to normal.  
 > rlk{blpdfp_iajylg_iyi}
 
-The prompt bolds the hint `Colemak`.  
-Colemak is a keyboard layout with different key positions.
+題目有使用粗體標出了提示 `Colemak` 
+Colemak 是一種鍵盤配置方式，將字母重新排列
 
-That means the given flag was typed using the Colemak layout.  
-Just map the letters back to QWERTY to recover it.
+也就是說題目給的 flag 是使用 Colemak 配置打出來的  
+只要對照鍵位表將字母轉回一般的即可
 
 Flag: `sun{burger_layout_lol}`
 
@@ -52,21 +52,21 @@ Flag: `sun{burger_layout_lol}`
 ## Web
 ### Lunar Auth
 
-The landing page doesn’t show much, but it mentions **no robots are allowed**.
+題目進來頁面沒甚麼資訊 但提到了**no robots are allowed**
 
 ![alt text](Auth_1.png)
 
-Check `robots.txt`:
+看一下 `robots.txt`  
 ```
 # tired of these annoying search engine bots scraping the admin panel page logins:
 
 Disallow: /admin
 ```
 
-Looks like a normal login page.  
+看起來正常的登入介面  
 ![alt text](Auth_2.png)
 
-Client-side validation:  
+前端驗證
 ![alt text](Auth_3.png)
 
 Flag: `sun{cl1ent_s1d3_auth_1s_N3V3R_a_g00d_1d3A_983765367890393232}`
@@ -75,20 +75,21 @@ Flag: `sun{cl1ent_s1d3_auth_1s_N3V3R_a_g00d_1d3A_983765367890393232}`
 
 ### Lunar Shop
 
-This looks like a storefront listing items.  
-The URL contains a `product_id` parameter.  
+題目看起來是一個清單顯示販售物品  
+觀察網址可以發現有 `product_id` 的參數  
 ![alt text](shop_1.png)  
 
-You can trigger an error:  
+可以戳出 Error
 ![alt text](shop_2.png)  
 
-Then try UNION-based SQL injection; there are 4 columns.  
-I guessed it was SQLite, so I queried `sqlite_master` to enumerate tables and schema:
+然後開始試 UNION base SQL Injection 有 4 個 column  
+猜使用的是 SQLite 所以戳 `sqlite_master` 來看有哪些 table 及 schema
 ```sql
 UNION SELECT NULL, name, sql, NULL FROM sqlite_master WHERE type='table'  
 ```
 
-From there it’s straightforward to pull the flag:
+就可以知道怎麼拿 flag 了
+
 ```sql
 UNION SELECT NULL, NULL, flag, NULL FROM flag 
 ```
@@ -100,9 +101,9 @@ Flag: `sun{baby_SQL_injection_this_is_known_as_error_based_SQL_injection_8767289
 ## Forensics
 ### Pretty Delicious Food
 
-Given a [pdf](./prettydeliciouscakes.pdf). I ran `strings` and `binwalk`.
+題目給了一個 [pdf 檔](./prettydeliciouscakes.pdf) 直接先 `strings` 跟 `binwalk`  
 
-`strings` didn’t show anything interesting.
+`strings` 沒看到甚麼有趣的  
 ```
 $ binwalk ./prettydeliciouscakes.pdf             
 
@@ -119,27 +120,26 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 4381993       0x42DD29        Zlib compressed data, default compression
 ```
 
-Extracting the blob at `0x5DC` gives a text file:
+拆出來 `0x5DC` 有一個文字檔
 ```js
 const data = 'c3Vue3AzM3BfZDFzX2ZsQGdfeTAhfQ==';
 ```
 
-Looks very much like Base64.
+長的就一臉 Base64 的樣子
 
 Flag: `sun{p33p_d1s_fl@g_y0!}`
 
 ---
 
 ### t0le t0le
-
-Given a [Word doc](t0le.docx).  
-`binwalk` showed a `.bin` file inside, which looked suspicious, so I dug in.
+題目給了一個 [word 檔](t0le.docx)  
+`binwalk` 拆出來看到一個 `.bin` 的檔案覺得怪怪的進去翻  
 
 ![alt text](t0le.png)  
 
-Since it ends with `=`, I tried Base64 in CyberChef.  
-The result was `fha{g0yr_g0yr_zl_o3y0i3q!}`, which looks like a flag.  
-Guessing ROT13 yields the flag.
+看到 `=` 結尾都想戳一下 base64
+進 CyberChef 解完是`fha{g0yr_g0yr_zl_o3y0i3q!}`很像 flag 的形狀了  
+猜 rot13 就有 flag 了
 
 Flag: `sun{t0le_t0le_my_b3l0v3d!}`
 
@@ -147,34 +147,36 @@ Flag: `sun{t0le_t0le_my_b3l0v3d!}`
 
 ### Intergalactic Copyright Infringement
 
-Given a [evidence.pcapng](evidence.pcapng) and opened it in Wireshark.  
-There are a lot of BitTorrent packets.  
+題目給一個 [evidence.pcapng](evidence.pcapng) 用 Wireshark 開起來  
+有一堆 BitTorrent 的封包  
 ![alt text](Infringement_1.png)  
-I assumed we needed to reconstruct files from these packets.  
-Wireshark doesn’t seem to directly export objects for BitTorrent (at least I didn’t find it),  
-and i don't know how to do it manually,
-so I started casting spells with an LLM.
+猜是從這些封包裡面撈檔案找  
+但 Wireshark 好像不能直接 export objects for bittorrent (至少我沒看到)  
+於是開始{{<spoiler>}}出一張嘴{{</spoiler>}}詠唱  
 
-Model: Claude Sonnet 4  
+Model: Claude Sonnet 4
 Prompt:  
 ```
 i have a #file:evidence.pcapng contain some bittorrent connection data, how to get the bittorrent content
 ```
 
-After execute the script provided by Claude,
-Among the recovered files I found a JPG:
+在 Claude 生出 script 並執行後  
+在一堆檔案裡翻到一個 jpg 
 
 ![](./Infringement_2.png)  
-(This is a screenshot.)
+(這是一張截圖)
 
-It’s clearly flag-shaped, but half of it is missing — looks like Claude’s script wasn’t robust.  
-{{<spoiler>}}Claude: “If you think you can do better, go ahead.”{{</spoiler>}}  
-Switched to another model (GPT-5) and adjusted the prompt to focus on images.  
-Finally got this:
+可以發現這是 flag 的形狀沒錯 但有一半消失了  
+也就是說 Claude 沒把 script 寫好(?)  
+{{<spoiler>}}Claude: 你行你上{{</spoiler>}}  
+換個模型(GPT-5)試試看  
+既然知道是圖片就改一下 Prompt  
+讓他 focus 在圖片上  
+最後得到
 
 ![alt text](Infringement_3.png)  
 
-It’s still ugly, but the flag is legible.  
+雖然還是很醜但已經可以看出 flag 了  
 
 script [here](./extract_images.py)
 
@@ -186,8 +188,9 @@ Flag: `sun{4rggg_sp4c3_p1r4cy}`
 
 ### BASEic
 
-Decompiled in IDA and saw two strings; one of them ends with `=`.  
-Threw it into CyberChef and decoded Base64.
+進 ida decompile 看到兩個可以字串  
+其中一個還是 `=` 結尾  
+撿起來丟進 CyberChef 解 Base64
 
 ![alt text](BASEic.png)  
 
@@ -199,16 +202,20 @@ Flag: `sun{c0v3r1ng_ur_B4535}`
 
 chal files: [flag.txt](./flag.txt), [palatine_pack](./palatinepack)  
 
-A binary and an output file were provided. Just reverse the process.  
-How did I reverse it? I didn’t — I tried IDA decompile but couldn’t make sense of it,  
-so I fed the key function to GPT-5.
+給一個執行檔跟輸出的結果  
+逆著做回去就好  
 
-Then I got [reverse_main.py](./reverse_main.py).  
-Running it yields the flag.
+蛤? 你問我怎麼逆的?  
+我不會阿 .w.  
+
+就丟進 ida decompile 完發現看不懂, 轉頭把重點 function 丟給 GPT-5   
+
+然後我就得到 [reverse_main.py](./reverse_main.py)  
+執行完就有flag了  
 
 Flag: `sunshine{C3A5ER_CR055ED_TH3_RUB1C0N}`
 
-BTW I only opened this challenge in the last 10 minutes and submitted with one minute left.  
+btw 最後 10 分鐘才點進這題 倒數一分鐘送出 flag  
 {{<spoiler>}}vibe CTF player lol{{</spoiler>}}
 
 ---
