@@ -1,13 +1,13 @@
 ---
 title: "SunshineCTF 2025 Writeup"
 date: 2025-09-28T19:14:54+08:00
-draft: true # Set 'false' to publish
+draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
 description: ''
 categories:
-  -
+  - CTF
 tags:
-  -
+  - Write Up
 ---
  
 Team: `nchu_goose`  
@@ -152,7 +152,8 @@ There are a lot of BitTorrent packets.
 ![alt text](Infringement_1.png)  
 I assumed we needed to reconstruct files from these packets.  
 Wireshark doesn’t seem to directly export objects for BitTorrent (at least I didn’t find it),  
-so I started {{<spoiler>}}casting spells with an LLM{{</spoiler>}}.
+and i don't know how to do it manually,
+so I started casting spells with an LLM.
 
 Model: Claude Sonnet 4  
 Prompt:  
@@ -160,6 +161,7 @@ Prompt:
 i have a #file:evidence.pcapng contain some bittorrent connection data, how to get the bittorrent content
 ```
 
+After execute the script provided by Claude,
 Among the recovered files I found a JPG:
 
 ![](./Infringement_2.png)  

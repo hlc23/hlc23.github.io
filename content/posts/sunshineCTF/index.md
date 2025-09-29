@@ -1,13 +1,13 @@
 ---
 title: "SunshineCTF 2025 Writeup"
 date: 2025-09-28T19:14:54+08:00
-draft: true # Set 'false' to publish
+draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
 description: ''
 categories:
-  - 
+  - CTF
 tags:
-  -
+  - Write Up
 ---
  
 Team: `nchu_goose`  
@@ -160,6 +160,7 @@ Prompt:
 i have a #file:evidence.pcapng contain some bittorrent connection data, how to get the bittorrent content
 ```
 
+在 Claude 生出 script 並執行後  
 在一堆檔案裡翻到一個 jpg 
 
 ![](./Infringement_2.png)  
