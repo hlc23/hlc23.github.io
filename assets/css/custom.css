@@ -47,7 +47,8 @@
 */
 
 /* 覆寫 h1 標題中的錨點連結樣式，讓它看起來像普通連結 */
-#content h1 > a {
+/* 只應用在有 id 屬性的 h1 標題上 */
+#content h1[id] > a {
   /* 使用與普通連結相同的樣式 */
   text-decoration: underline !important;
   font-weight: bold;
@@ -55,17 +56,17 @@
   font-size: inherit; /* 保持 h1 的字體大小 */
 }
 
-#content h1 > a:hover {
+#content h1[id] > a:hover {
   color: #047857 !important; /* emerald-600 */
   text-decoration: underline !important;
 }
 
 /* 深色模式 */
-.dark #content h1 > a {
+.dark #content h1[id] > a {
   color: #6ee7b7 !important; /* emerald-300 */
 }
 
-.dark #content h1 > a:hover {
+.dark #content h1[id] > a:hover {
   color: #a7f3d0 !important; /* emerald-200 */
 }
 
