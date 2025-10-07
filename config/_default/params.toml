@@ -16,6 +16,12 @@ disqusShortname = ""
 [emoji]
 enableEmoji = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        title = true
+
 # giscus is a comment system based on GitHub Discussions. see https://giscus.app
 [giscus]       
     enable = false

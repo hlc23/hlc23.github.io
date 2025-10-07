@@ -1,13 +1,27 @@
 {{/* Resources */}} 
-{{- $tailwind := resources.Get "css/tailwind.css" | postCSS (dict "config" "./config/postcss.config.js") -}}
-{{ $spoiler := resources.Get "css/spoiler.css" | postCSS (dict "config" "./config/postcss.config.js") -}}
+{{/* 載入主題的原始 Tailwind CSS */}}
+{{- $themeTailwind := resources.Get "css/tailwind.css" -}}
+{{- $themeTailwind = $themeTailwind | postCSS (dict "config" "./config/postcss.config.js") -}}
+
+{{/* 載入其他 CSS */}}
+{{- $spoiler := resources.Get "css/spoiler.css" | postCSS (dict "config" "./config/postcss.config.js") -}}
+
+{{/* 載入您的自定義 CSS（如果存在） */}}
+{{- $customCSS := "" -}}
+{{- with resources.Get "css/custom.css" -}}
+  {{- $customCSS = . | postCSS (dict "config" "./config/postcss.config.js") -}}
+{{- end -}}
 
 {{/* MathJax */}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
 
-{{/* Processor */}} 
-{{- $styles := slice $tailwind $spoiler | resources.Concat "css/app.css" -}} 
+{{/* Processor - 合併所有 CSS */}} 
+{{- $styles := slice $themeTailwind $spoiler -}}
+{{- if $customCSS -}}
+  {{- $styles = $styles | append $customCSS -}}
+{{- end -}}
+{{- $styles = $styles | resources.Concat "css/app.css" -}} 
 
 {{/* Output */}} 
 {{- if eq hugo.Environment "development" -}}

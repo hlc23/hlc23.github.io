@@ -1,0 +1,80 @@
+/* ============================================
+   自定義樣式 - 只覆寫或添加需要修改的部分
+   主題的原始樣式會自動從 themes/enchanted-lowkey/assets/css/tailwind.css 載入
+   ============================================ */
+
+@tailwind components;
+@tailwind utilities;
+
+/* 自定義 Components - 新增可重複使用的元件 */
+@layer components {
+  /* 範例：自定義按鈕樣式 */
+  .btn-custom {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  /* 範例：自定義卡片樣式 */
+  .card-custom {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg p-6 transition-shadow duration-300;
+  }
+}
+
+/* 自定義 Utilities - 新增自定義工具類 */
+@layer utilities {
+  /* 範例：文字陰影效果 */
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 範例：漸層背景 */
+  .gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+}
+
+/* ============================================
+   全域自定義樣式（不使用 @layer）
+   在這裡添加任何不使用 Tailwind 的純 CSS
+   或覆寫主題特定樣式
+   ============================================ */
+
+/* 範例：覆寫程式碼區塊樣式 */
+/*
+#content pre {
+  border-radius: 1rem;
+  border-width: 2px;
+}
+*/
+
+/* 覆寫 h1 標題中的錨點連結樣式，讓它看起來像普通連結 */
+#content h1 > a {
+  /* 使用與普通連結相同的樣式 */
+  text-decoration: underline !important;
+  font-weight: bold;
+  color: #059669 !important; /* emerald-700 */
+  font-size: inherit; /* 保持 h1 的字體大小 */
+}
+
+#content h1 > a:hover {
+  color: #047857 !important; /* emerald-600 */
+  text-decoration: underline !important;
+}
+
+/* 深色模式 */
+.dark #content h1 > a {
+  color: #6ee7b7 !important; /* emerald-300 */
+}
+
+.dark #content h1 > a:hover {
+  color: #a7f3d0 !important; /* emerald-200 */
+}
+
+/* 範例：其他連結顏色自定義 */
+/*
+#content a {
+  color: #2563eb;
+}
+#content a:hover {
+  color: #1d4ed8;
+}
+*/
