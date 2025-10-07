@@ -1,5 +1,5 @@
 ---
-title: "JailCTF 2025"
+title: "JailCTF 2025 Write Up"
 date: 2025-10-05T21:54:07+08:00
 draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents

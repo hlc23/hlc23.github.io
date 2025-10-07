@@ -1,5 +1,5 @@
 ---
-title: "K17CTF Write Up (EN)"
+title: "K17CTF 2025 Write Up"
 date: 2025-09-19T20:13:05+08:00
 draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
@@ -11,7 +11,7 @@ tags:
 ---
 
 {{< alert info >}}
-This is post is a translation of <a href="/posts/k17ctf_write_up/">K17CTF Write Up (ZH)</a>.<br>
+This is post is a translation of <a href="/posts/k17ctf_write_up/">K17CTF Write Up (zh-tw)</a>.<br>
 Translate by Github Copilot use GPT-4.1 .
 {{< /alert >}}
 

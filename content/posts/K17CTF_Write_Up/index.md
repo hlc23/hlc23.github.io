@@ -1,5 +1,5 @@
 ---
-title: "K17CTF Write Up"
+title: "K17CTF 2025 Write Up"
 date: 2025-09-19T20:13:05+08:00
 draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents

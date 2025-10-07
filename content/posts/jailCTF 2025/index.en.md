@@ -1,5 +1,5 @@
 ---
-title: "JailCTF 2025"
+title: "JailCTF 2025 Write Up"
 date: 2025-10-05T21:54:07+08:00
 draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
@@ -9,6 +9,11 @@ categories:
 tags:
   - Write Up
 ---
+
+{{< alert info >}}
+This is post is a translation of <a href="/posts/jailctf-2025/">"jail CTF 2025 (zh-tw)"</a>.<br>
+Not all but some help by Github Copilot use GPT-4o .
+{{< /alert >}}
 
 ## pyjail
 ### blindness

@@ -1,5 +1,5 @@
 ---
-title: "Securinets CTF 2025"
+title: "Securinets CTF 2025 Write Up"
 date: 2025-10-05T02:34:25+08:00
 draft: false # Set 'false' to publish
 tableOfContents: false # Enable/disable Table of Contents
