@@ -21,18 +21,20 @@ tags:
 ---
 
 ## Change Log
+### 2025/10/07
+- i18n support
 ### 2025/09/25
 - apply spoiler effect  
 ### 2025/08/29
 - Complete some information.
 - Change theme to [Lowkey](https://github.com/nixentric/Lowkey-Hugo-Theme)
 ### 2023/12/3
-- [x] set up `disqus`
+- set up `disqus`
 ### 2023/12/1
-- [x] add many config 
+- add many config 
 ### 2023/11/20
-- [x] Add `spoiler` shortcode like spoiler in discord
+- Add `spoiler` shortcode like spoiler in discord
 ### 2023/11/16
-- [x] Github Page Deploy
-- [x] Hugo Theme
-- [x] change avatar
+- Github Page Deploy
+- Hugo Theme
+- change avatar

@@ -33,3 +33,15 @@
     name = "Donate"
     url = "https://ko-fi.com/hlc23"
     weight = 6
+
+[[social]]
+    identifier = "instagram"
+    name = "Instagram"
+    url = "https://www.instagram.com/h_lee_c23/"
+    weight = 2
+
+[[social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/hlc23"
+    weight = 3
