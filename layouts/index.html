@@ -6,21 +6,37 @@
 
 <section>{{ .Content }}</section>
 
-<section>
-  <h3>Posts</h3>
-  <ul style="margin-left: 0px;">
-  {{ range .Site.RegularPages }}
-    <li style="list-style-type: none;">
-      <div style="font-size: 14px;">
-        <time style="margin-right: 10px;" datetime="{{ .PublishDate }}" title='{{ .PublishDate.Format "2006, Jan 2" }}'>
-          {{ .PublishDate.Format "2006/01/02" }}
-        </time>
-
-        <a href="{{ .RelPermalink }}">[{{ .Type }}] {{ .Title }}</a>
-      </div>
-    </li>
+<!-- Posts Section -->
+<div class="mt-8">
+  <h2 class="text-2xl font-bold mb-4">📝 Posts</h2>
+  <ul class="space-y-2">
+    {{ range (where .Site.RegularPages "Section" "posts") }}
+      <li class="flex items-center gap-2">
+        <span class="text-sm text-gray-500 dark:text-gray-400">{{ .Date.Format "2006-01-02" }}</span>
+        <a href="{{ .RelPermalink }}" class="text-blue-600 dark:text-blue-400 hover:underline">
+          {{ .Title }}
+        </a>
+        {{/*  <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">Post</span>  */}}
+      </li>
     {{ end }}
   </ul>
-</section>
+</div>
+
+<!-- Slides Section -->
+<div class="mt-8">
+  <h2 class="text-2xl font-bold mb-4">🎬 Slides</h2>
+  <ul class="space-y-2">
+    {{ $slidesSection := .Site.GetPage "section" "slides" }}
+    {{ range $slidesSection.Sections }}  <!-- Get direct child sections of /slides/ -->
+      <li class="flex items-center gap-2">
+        <span class="text-sm text-gray-500 dark:text-gray-400">{{ .Date.Format "2006-01-02" }}</span>
+        <a href="{{ .RelPermalink }}" class="text-green-600 dark:text-green-400 hover:underline">
+          {{ .Title }}
+        </a>
+        {{/*  <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">Slide</span>  */}}
+      </li>
+    {{ end }}
+  </ul>
+</div>
 
 {{ end }}

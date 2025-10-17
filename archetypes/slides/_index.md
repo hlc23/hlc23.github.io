@@ -2,8 +2,10 @@
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
 outputs = ["Reveal"]
+addAnchors: false  # Force anchors OFF
 [reveal_hugo]
 theme = "black"              # black, white, league, beige, sky, night, serif, simple, solarized
+# custom_theme = "reveal-hugo/themes/robot-lung.css"
 highlight_theme = "monokai"  # monokai, zenburn, github, dracula, etc.
 transition = "slide"         # none, fade, slide, convex, concave, zoom
 transition_speed = "default" # default, fast, slow
@@ -17,15 +19,23 @@ Your presentation starts here
 
 ## Slide 2
 
-Add your content
+Add your content  
 
-Use `---` to separate horizontal slides
+Put the shortcode around the slides you want to group together.
+
+```markdown
+{{%/* section */%}}
+
+## Section slide 1
 
 ---
 
-## Slide 3
+## Section slide 2
 
-Use `___` to separate vertical slides
+{{%/* /section */%}}
+```
+
+Keep going down.
 
 ---
 

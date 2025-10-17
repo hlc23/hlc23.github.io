@@ -1,4 +1,7 @@
 <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
-  <a href="#{{ .Anchor }}">#</a>
-    {{ .Text }}
+  {{- $addAnchors := .Page.Params.addAnchors | default (ne .Page.Section "slides") -}}
+  {{- if $addAnchors -}}
+  <a href="#{{ .Anchor }}" style="padding-right: 5px;">#</a>
+  {{- end -}}
+  {{ .Text }}
 </h{{ .Level }}>

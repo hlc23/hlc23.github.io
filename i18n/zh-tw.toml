@@ -14,7 +14,10 @@
     other = 'Page not found'
 
 [404_text]
-    other = "你肯定搞錯了什麼"
+    other = "肯定搞錯了什麼"
 
 [back_home]
     other = '返回首頁'
+
+[sections]
+    other = '內容列表'
