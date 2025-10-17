@@ -2,7 +2,7 @@ baseURL = 'http://hlc23.dev'
 copyright = "2025 - {year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
 languageCode = 'zh-TW'
 defaultContentLanguage = 'zh-tw'
-theme = 'enchanted-lowkey'
+theme = ['enchanted-lowkey', 'reveal-hugo']
 title = "hlc23's blog"
 enableRobotsTXT = true
 summaryLength = 15
@@ -17,6 +17,8 @@ pagination.pagerSize = 5
     weight = 2
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
@@ -30,3 +32,8 @@ pagination.pagerSize = 5
     noHl = false
     style = 'dracula'
     tabWidth = 4
+
+[outputFormats.Reveal]
+  baseName = "index"
+  mediaType = "text/html"
+  isHTML = true

@@ -18,3 +18,6 @@
 
 [back_home]
     other = 'Back to home'
+
+[sections]
+    other = 'Sections'

@@ -115,14 +115,6 @@ def say_hello():
     print("Hello!")
 def main():
     say_hello()
-
-
-aaa
-
-
-
-
-bbb
 ```
 ```javascript
 var s = "JavaScript syntax highlighting";
@@ -150,6 +142,20 @@ int main()
     return 0;
 }
 ```
+
+
+## Code block options
+````text {file="content/example.md"}
+```LANG [OPTIONS]
+CODE
+```
+````
+
+- `hl_Lines="1,3-5"`: Highlight specific lines
+- `lineNoStart=N`: Start line numbering from N
+- `lineNos`: Enable line numbers
+- `tabWidth=N`: Set tab width to N spaces
+- `linenos=false`: Disable line numbers
 
 # Alerts
 
@@ -205,3 +211,12 @@ apply the scroll-auto utility on hover.
 term
 : definition
 : another definition
+
+---
+
+# And some custom shortcodes...
+
+### Spoiler
+
+{{< spoiler >}}This is a spoiler!{{< /spoiler >}}
+
