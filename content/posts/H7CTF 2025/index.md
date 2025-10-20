@@ -64,7 +64,7 @@ Flag: `H7tex{th3_sh4r1ng4n_r3v34ls_4ll_s3cr3ts}`
 
 >Point out the building from which the photo was captured.  
 
-chal file: [IMG_2969.HEIC](./chal/IMG_2969.HEIC)  
+chal file: [IMG_2969.HEIC](./image/IMG_2969.HEIC)  
 
 ![](image/IMG_2969.HEIC)  
 
