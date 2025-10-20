@@ -151,7 +151,7 @@ CODE
 ```
 ````
 
-- `hl_Lines="1,3-5"`: Highlight specific lines
+- `hl_lines=[3,"6-8"]`: Highlight specific lines
 - `lineNoStart=N`: Start line numbering from N
 - `lineNos`: Enable line numbers
 - `tabWidth=N`: Set tab width to N spaces
@@ -217,6 +217,7 @@ term
 # And some custom shortcodes...
 
 ### Spoiler
-
-{{< spoiler >}}This is a spoiler!{{< /spoiler >}}
-
+```
+{{</* spoiler */>}}SPOILER CONTENT{{</* /spoiler */>}} // process markdown then shortcodes
+{{%/* spoiler */%}}SPOILER CONTENT{{%/* /spoiler */%}} // process shortcodes then markdown
+```
