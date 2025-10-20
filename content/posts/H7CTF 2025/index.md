@@ -13,7 +13,7 @@ tags:
 
 ## Before Start...
 
-
+原本要打 LINE CTF 結果發現打不動  :skull:  
 
 ## Misc
 
@@ -104,7 +104,7 @@ void scribe_function()
   }
   buffer[strcspn(buffer, "\n")] = 0;
   printf("Processing inscription: ");
-  printf(buffer);
+  printf(buffer); // format string vulnerability
   putchar(10);
   puts("Verifying imperial authority...");
   imperial_access();
