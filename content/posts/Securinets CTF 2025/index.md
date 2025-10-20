@@ -11,7 +11,8 @@ tags:
 ---
 
 team: `nchu_goose`  
-rk: #230 / 558
+rk: #230 / 558  
+offical github: https://github.com/SunshineCTF/SunshineCTF-2025-Public
 
 有人跟我說要打這場然後又跟我說沒空  
 [@Chao28661](https://ctftime.org/user/218204)  
