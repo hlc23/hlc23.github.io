@@ -37,3 +37,7 @@ pagination.pagerSize = 5
   baseName = "index"
   mediaType = "text/html"
   isHTML = true
+
+[services]
+  [services.googleAnalytics]
+    id = "G-QL2WFC0BGK"  # Google Analytics ID
