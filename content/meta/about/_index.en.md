@@ -2,7 +2,7 @@
 title: "About"
 date: 2025-08-29T03:55:02+08:00
 draft: false
-url: "/about/"
+url: "/en/about/"
 ---
 
 ## Intro
