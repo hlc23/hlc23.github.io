@@ -2,7 +2,7 @@
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
 outputs = ["Reveal"]
-addAnchors: false  # Force anchors OFF
+addAnchors = false  # Force anchors OFF
 [reveal_hugo]
 theme = "black"              # black, white, league, beige, sky, night, serif, simple, solarized
 # custom_theme = "reveal-hugo/themes/robot-lung.css"
