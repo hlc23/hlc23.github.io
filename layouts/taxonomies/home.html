@@ -1,0 +1,54 @@
+{{ define "main" }} 
+
+<div class="flex flex-col gap-1">
+  <h1 class="title-small">
+    {{ if .Params.header }}
+      {{ .Params.header }}
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  </h1>
+
+  {{ with .Content }}
+    {{ . }}
+  {{ end }}
+</div>
+
+<section class="py-10 flex flex-col gap-10">
+  <ul class="taxonomy-list">
+    {{/* Preferred: real taxonomy terms page context */}}
+    {{ if .Data.Terms }}
+      {{ range .Data.Terms.ByCount }}
+        <li>
+          <a href="{{ .Page.RelPermalink }}">
+            {{ .Page.Title }} ({{ .Count }})
+          </a>
+        </li>
+      {{ end }}
+    {{ else }}
+      {{/* Fallback for custom _index.md using type=taxonomies */}}
+      {{ $permalink := lower .RelPermalink }}
+      {{ $isCategories := in $permalink "/categories/" }}
+      {{ $isTags := in $permalink "/tags/" }}
+      {{ $terms := cond $isCategories .Site.Taxonomies.categories (cond $isTags .Site.Taxonomies.tags nil) }}
+
+      {{ if $terms }}
+        {{ range $term, $pages := $terms }}
+          {{ $base := cond $isCategories "/categories/" "/tags/" }}
+          {{ $termURL := printf "%s%s/" $base (urlize $term) }}
+          <li>
+            <a href="{{ relURL $termURL }}">
+              {{ humanize $term }} ({{ len $pages }})
+            </a>
+          </li>
+        {{ end }}
+      {{ else }}
+        <li>
+          <span class="text-gray-500 dark:text-gray-400">Nothing here</span>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+
+{{ end }}
