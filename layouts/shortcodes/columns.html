@@ -1,0 +1,5 @@
+{{- $gap := .Get "gap" | default "2rem" -}}
+{{- $class := .Get "class" | default "" -}}
+<div class="reveal-columns {{ $class }}" style="display: flex; gap: {{ $gap }}; align-items: flex-start;">
+{{- .Inner -}}
+</div>

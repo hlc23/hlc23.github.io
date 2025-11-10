@@ -79,3 +79,26 @@
   color: #1d4ed8;
 }
 */
+
+/* ============================================
+   Reveal.js 投影片樣式
+   ============================================ */
+
+/* 兩欄佈局 */
+.reveal .reveal-columns {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.reveal .reveal-columns > div {
+  flex: 1;
+}
+
+/* 響應式：小螢幕改為垂直排列 */
+@media (max-width: 768px) {
+  .reveal .reveal-columns {
+    flex-direction: column;
+  }
+}

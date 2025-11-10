@@ -1,0 +1,5 @@
+{{- $width := .Get "width" | default "1" -}}
+{{- $class := .Get "class" | default "" -}}
+<div class="reveal-column {{ $class }}" style="flex: {{ $width }};">
+{{- .Inner -}}
+</div>
