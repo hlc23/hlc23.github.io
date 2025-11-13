@@ -21,8 +21,8 @@ ___
 ### Contact Me
 
 - Discord: [hlc23.](https://discord.gg/3VScsPGDPJ)
-- IG: [h_lee_c23](https://www.instagram.com/h_lee_c23/)
 - GitHub: [@hlc23](https://github.com/hlc23)
 - Blog: [hlc23.dev](https://hlc23.dev)
+- Email: [henryleecode23@gmail.com](mailto:henryleecode23@gmail.com)
 
 {{% /section %}}
