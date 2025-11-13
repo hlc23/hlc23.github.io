@@ -39,7 +39,7 @@ weight = 40
 
 ---
 
-```
+```text
 https://github.com/alex/what-happens-when?tab=readme-ov-file#parse-url
 ```
 
@@ -235,7 +235,7 @@ def login():
 
 @app.route("/logout")
 def logout():
-    session.pop("user", None)
+    session.clear()
     return redirect(url_for("index"))
 
 @app.route("/dashboard")
@@ -245,10 +245,24 @@ def dashboard():
     return ...
 ```
 
+{{% note %}}
+Flask 會自動幫你處理 Cookie 和 Session 的關聯
+{{% /note %}}
+
 ---
 
 可以想成一個字典  
 以 session id 為 key    
 以使用者資料為 value  
+
+---
+
+```py
+sessions = {
+    session_id1: {key1: value1, key2: value2, ...},
+    session_id2: {key1: value1, key2: value2, ...},
+    ...
+}
+```
 
 {{% /section %}}

