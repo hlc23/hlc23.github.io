@@ -282,8 +282,6 @@ Wired Url Parsing
 
 ![alt text](img/url-parse.png)
 
----
-
 {{% /section %}}
 
 ---
