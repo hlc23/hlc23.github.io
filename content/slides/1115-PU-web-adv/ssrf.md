@@ -1,5 +1,5 @@
 +++
-weight = 60
+weight = 70
 +++
 
 {{% section %}}
@@ -108,6 +108,10 @@ weight = 60
 <span class="fragment">萬用協議</span>  
 <span class="fragment">建構任意 TCP 封包</span>  
 <span class="fragment">有點老 有用但不多</span>
+
+---
+
+[Just Gopher It: Escalating a Blind SSRF to RCE for $15k — Yahoo Mail](https://sirleeroyjenkins.medium.com/just-gopher-it-escalating-a-blind-ssrf-to-rce-for-15k-f5329a974530)
 
 ---
 
@@ -291,12 +295,11 @@ Wired Url Parsing
 ---
 
 - [Lab: SSRF-waf](https://github.com/hlc23/CS-Labs/tree/main/SSRF-waf)
+- [Lab: SSRF-PHP-LFI](https://github.com/hlc23/CS-Labs/tree/main/SSRF-PHP-LFI)
 - [Lab: SSRF-cmdi](https://github.com/hlc23/CS-Labs/tree/main/SSRF-cmdi)
 
 {{% note %}}
 `https://httpbin.org/redirect-to?url=http%3A%2F%2Fadmin%3A5001%2Fadmin%2Fping%3Fhost%3D1.1.1.1%3Bcat%2520%2Fapp%2Fflag.txt`
 {{% /note %}}
-
----
 
 {{% /section %}}
