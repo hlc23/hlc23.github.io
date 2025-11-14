@@ -7,6 +7,12 @@ weight = 20
 
 ---
 
+### Slido
+
+---
+
+### Resources
+
 You can find this slide on [hlc23.dev](https://hlc23.dev).  
 And Lab on [Github](https://github.com/hlc23/CS-Labs).
 
@@ -16,8 +22,7 @@ And Lab on [Github](https://github.com/hlc23/CS-Labs).
 
 ---
 
-### Slido
-
-
+不會用 Docker ?  
+<span class="fragment">Try Container Tools in VSCode!</span>
 
 {{% /section %}}
