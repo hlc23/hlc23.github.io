@@ -31,11 +31,11 @@ weight = 40
 
 ---
 
-## What happened when you visit a website?
+## <code>What happened when you visit a website?</code>
 
 ---
 
-### URL Structure
+### <code>URL Structure</code>
 
 ---
 
@@ -78,7 +78,7 @@ ex. [ₕⓁＣ㉓.Ⅾ㋎](https://ₕⓁＣ㉓.Ⅾ㋎)
 
 {{% section %}}
 
-## HTTP Protocol
+## <code>HTTP Protocol</code>
 
 ---
 
@@ -195,7 +195,7 @@ Strict-Transport-Security 強制使用 HTTPS 連線(HTTP HSTS)
 
 ---
 
-#### When to send cookies?
+#### <code>When to send cookies?</code>
 - Browser sends cookies via <span style="color:#ffff00">Cookie</span> header
 - Only send cookies to matching Domain and Path
 
