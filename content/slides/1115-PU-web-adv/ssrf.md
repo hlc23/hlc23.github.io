@@ -295,6 +295,7 @@ Wired Url Parsing
 - [Lab: SSRF-waf](https://github.com/hlc23/CS-Labs/tree/main/SSRF-waf)
 - [Lab: SSRF-PHP-LFI](https://github.com/hlc23/CS-Labs/tree/main/SSRF-PHP-LFI)
 - [Lab: SSRF-cmdi](https://github.com/hlc23/CS-Labs/tree/main/SSRF-cmdi)
+- [Chal: SunshineCTF-2025-WebForge](https://github.com/hlc23/CS-Labs/tree/main/SunshineCTF-2025-WebForge)
 
 {{% note %}}
 `https://httpbin.org/redirect-to?url=http%3A%2F%2Fadmin%3A5001%2Fadmin%2Fping%3Fhost%3D1.1.1.1%3Bcat%2520%2Fapp%2Fflag.txt`
