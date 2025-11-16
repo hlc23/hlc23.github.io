@@ -137,7 +137,7 @@ Man-In-The-Middle Attack
 
 {{< slide background="#ffffff" transition="none" >}}
 
-![alt text](imag/before-mitm.png)
+![alt text](img/before-mitm.png)
 
 ---
 
