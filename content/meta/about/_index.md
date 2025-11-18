@@ -45,4 +45,5 @@ Hi, hlc23 是我, 也可以叫我 lee
 
 ## Contact me
 
+- Discord: [hlc23.dev](https://discord.gg/H56VPrBAfH)
 - Email: [me@hlc23.dev](mailto:me@hlc23.dev)
