@@ -23,6 +23,6 @@ ___
 - Discord: [hlc23.](https://discord.gg/3VScsPGDPJ)
 - GitHub: [@hlc23](https://github.com/hlc23)
 - Blog: [hlc23.dev](https://hlc23.dev)
-- Email: [henryleecode23@gmail.com](mailto:henryleecode23@gmail.com)
+- Email: [me@hlc23.dev](mailto:me@hlc23.dev)
 
 {{% /section %}}

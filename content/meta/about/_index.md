@@ -45,4 +45,4 @@ Hi, hlc23 是我, 也可以叫我 lee
 
 ## Contact me
 
-- Email: [henryleecode23@gmail.com](mailto:henryleecode23@gmail.com)
+- Email: [me@hlc23.dev](mailto:me@hlc23.dev)
