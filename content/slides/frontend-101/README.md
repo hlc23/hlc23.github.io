@@ -23,7 +23,7 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 
 **Interactive elements:**
 - Developer tools exercise (Network tab)
-- Quiz: Identifying static websites
+- Review: Static vs dynamic websites
 
 ### 3. HTML Basics (`02-html.md`)
 **Topics covered:**
@@ -42,8 +42,8 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 
 **Interactive elements:**
 - Practice Exercise 1: Build a self-introduction page
-- Quiz: Link tag identification
-- Quiz: div vs span difference
+- Review: HTML hyperlinks
+- Review: Container tags (div vs span)
 
 ### 4. CSS Basics (`03-css.md`)
 **Topics covered:**
@@ -67,8 +67,8 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 
 **Interactive elements:**
 - Practice Exercise 2: Build card layout with Flexbox
-- Quiz: CSS selector types
-- Quiz: Flexbox alignment
+- Review: CSS selector types
+- Review: Flexbox alignment methods
 
 ### 5. Git Basics (`04-git.md`)
 **Topics covered:**
@@ -83,8 +83,8 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 
 **Interactive elements:**
 - Practice: Create repository and make first commit
-- Quiz: What is a commit?
-- Quiz: GitHub Desktop advantages
+- Review: Git commit concepts
+- Review: GitHub Desktop benefits
 
 ### 6. GitHub Pages Deployment (`05-github-pages.md`)
 **Topics covered:**
@@ -101,8 +101,8 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 **Interactive elements:**
 - Practice Exercise 3: Deploy a complete website
 - Personal portfolio project suggestions
-- Quiz: GitHub Pages capabilities
-- Quiz: Website update process
+- Review: GitHub Pages scope and capabilities
+- Review: Website update workflow
 
 ### 7. Summary and Resources (`06-summary.md`)
 **Topics covered:**
@@ -122,7 +122,7 @@ The presentation consists of 9 files total: 2 index files (bilingual support), 6
 
 ### Learning Elements
 - **Multiple practice exercises** throughout the presentation
-- **Quiz questions** with answers for each major section
+- **Review sections** with bullet-point summaries for each major section
 - **Real-world examples** and best practices
 - **Interactive demonstrations** suggestions
 - **Progressive difficulty** from basics to deployment
