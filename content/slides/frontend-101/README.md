@@ -5,7 +5,7 @@ This is a comprehensive Reveal.js presentation designed for a 2-hour beginner's 
 
 ## Presentation Structure
 
-The presentation is organized into 7 files with approximately 112 slides total:
+The presentation consists of 9 files total: 2 index files (bilingual support), 6 content sections, and 1 README. The presentation content is organized into 6 main sections with approximately 112 slides total:
 
 ### 1. Introduction (`_index.md` / `_index.en.md`)
 - Course objectives and goals
