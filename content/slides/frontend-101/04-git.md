@@ -203,32 +203,26 @@ my-first-website/
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: Git 的 commit 是什麼？
+**Git Commit 概念**
 
-<ul>
-<li class="fragment">A. 刪除檔案</li>
-<li class="fragment">B. 上傳到雲端</li>
-<li class="fragment">C. 記錄一次變更</li>
-<li class="fragment">D. 建立新分支</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: C (記錄一次變更)</p>
+- Commit 是「記錄一次變更」的動作
+- 就像遊戲中的存檔點
+- 每個 commit 都有唯一的 ID
+- 可以隨時回到任何一個 commit
+- 不是刪除檔案、上傳或建立分支
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: GitHub Desktop 的主要優點是？
+**GitHub Desktop 的優點**
 
-<ul>
-<li class="fragment">A. 比指令列更快</li>
-<li class="fragment">B. 圖形化介面，容易上手</li>
-<li class="fragment">C. 功能比 Git 更強大</li>
-<li class="fragment">D. 不需要網路</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: B (圖形化介面，適合初學者)</p>
+- 圖形化介面，適合初學者
+- 不需要記複雜的指令
+- 視覺化顯示檔案變更
+- 簡化了 Git 操作流程
+- 功能與 Git 相同，只是操作方式更友善
 
 {{% /section %}}

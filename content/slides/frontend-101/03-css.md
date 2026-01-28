@@ -461,31 +461,26 @@ padding: 10px 15px 20px 25px;
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: 以下哪個不是 CSS 選擇器？
+**CSS 選擇器類型**
 
-<ul>
-<li class="fragment">A. <code>.className</code></li>
-<li class="fragment">B. <code>#idName</code></li>
-<li class="fragment">C. <code>tagName</code></li>
-<li class="fragment">D. <code>@selector</code></li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: D (<code>@</code> 用於 at-rules，不是選擇器)</p>
+- `.className` - Class 選擇器（可重複使用）
+- `#idName` - ID 選擇器（唯一）
+- `tagName` - 標籤選擇器
+- `@` 符號用於 at-rules（如 @media、@keyframes）
+- 選擇器讓我們能精確定位要套用樣式的元素
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: 要讓 Flexbox 子項目垂直置中，應該使用？
+**Flexbox 對齊方式**
 
-<ul>
-<li class="fragment">A. <code>justify-content: center;</code></li>
-<li class="fragment">B. <code>align-items: center;</code></li>
-<li class="fragment">C. <code>text-align: center;</code></li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: B (<code>align-items</code> 控制交叉軸)</p>
+- `justify-content` 控制主軸（水平）對齊
+- `align-items` 控制交叉軸（垂直）對齊
+- 垂直置中使用 `align-items: center;`
+- `text-align` 只用於文字對齊，不是 Flexbox 屬性
+- 記住：items 是控制交叉軸的關鍵
 
 {{% /section %}}

@@ -201,32 +201,26 @@ https://hlc23.github.io/my-first-website/
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: GitHub Pages 適合部署什麼類型的網站？
+**GitHub Pages 適用範圍**
 
-<ul>
-<li class="fragment">A. 需要資料庫的網站</li>
-<li class="fragment">B. 靜態網站 (HTML/CSS/JS)</li>
-<li class="fragment">C. PHP 網站</li>
-<li class="fragment">D. Java Spring 應用</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: B (靜態網站)</p>
+- 適合：靜態網站（HTML/CSS/JS）
+- 不適合：需要資料庫的網站
+- 不適合：需要伺服器處理的語言（PHP、Java Spring）
+- 完全免費且支援 HTTPS
+- 最適合個人作品集、文件網站、部落格
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: 更新 GitHub Pages 網站需要？
+**更新 GitHub Pages 網站**
 
-<ul>
-<li class="fragment">A. 重新設定 Pages</li>
-<li class="fragment">B. 付費升級</li>
-<li class="fragment">C. Commit 並 Push 到 GitHub</li>
-<li class="fragment">D. 手動上傳檔案</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: C (Commit 並 Push)</p>
+- 只需要 Commit 並 Push 到 GitHub
+- GitHub Actions 會自動重新部署
+- 不需要重新設定 Pages
+- 不需要付費或手動上傳
+- 通常 1-2 分鐘內完成更新
 
 {{% /section %}}

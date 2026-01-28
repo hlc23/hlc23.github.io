@@ -251,31 +251,28 @@ weight = 20
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: 以下哪個標籤用來建立超連結？
+**HTML 超連結**
 
-<ul>
-<li class="fragment">A. <code>&lt;link&gt;</code></li>
-<li class="fragment">B. <code>&lt;a&gt;</code></li>
-<li class="fragment">C. <code>&lt;href&gt;</code></li>
-<li class="fragment">D. <code>&lt;url&gt;</code></li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: B (<code>&lt;a&gt;</code>)</p>
+- 使用 `<a>` 標籤建立超連結
+- `href` 屬性指定連結目標
+- 可以連結到外部網站、內部頁面或錨點
+- 使用 `target="_blank"` 在新分頁開啟
+- `<link>` 標籤用於連結 CSS，不是超連結
 
 ---
 
-## 💡 小測驗
+## 📝 複習重點
 
-**問題**: `<div>` 和 `<span>` 的差別是？
+**容器標籤的差異**
 
-<ul>
-<li class="fragment">A. <code>&lt;div&gt;</code> 是區塊元素，<code>&lt;span&gt;</code> 是行內元素</li>
-<li class="fragment">B. <code>&lt;div&gt;</code> 是行內元素，<code>&lt;span&gt;</code> 是區塊元素</li>
-<li class="fragment">C. 沒有差別</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: A</p>
+- `<div>` 是區塊元素（block-level）
+  - 會佔滿整行
+  - 前後會自動換行
+- `<span>` 是行內元素（inline）
+  - 不會換行
+  - 只佔內容寬度
+- 選擇使用哪個取決於排版需求
 
 {{% /section %}}

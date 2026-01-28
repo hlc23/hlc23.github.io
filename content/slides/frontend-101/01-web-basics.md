@@ -67,13 +67,13 @@ https://github.com/hlc23/frontend-101?tab=code#readme
 
 ---
 
-## 💡 動動腦
+## 📝 複習重點
 
-打開瀏覽器的開發者工具 (F12)
+**瀏覽器開發者工具實作**
 
-- 切換到 **Network** 標籤
-- 重新整理頁面
-- 觀察有哪些檔案被載入？
+- 按 F12 開啟開發者工具
+- Network 標籤可以看到所有載入的檔案
+- 可以觀察 HTML、CSS、JS 和圖片的載入情況
 
 ---
 
@@ -99,17 +99,14 @@ https://github.com/hlc23/frontend-101?tab=code#readme
 
 ---
 
-## 🎯 小練習
+## 📝 複習重點
 
-**問題**: 以下哪些是靜態網頁？
+**靜態網頁 vs 動態網頁**
 
-<ul>
-<li class="fragment">A. 個人履歷網站</li>
-<li class="fragment">B. Facebook</li>
-<li class="fragment">C. 產品介紹頁面</li>
-<li class="fragment">D. 網路銀行</li>
-</ul>
-
-<p class="fragment" style="color:#4ade80">答案: A 和 C</p>
+- 靜態網頁：內容固定、不需資料庫
+  - 例如：個人履歷網站、產品介紹頁面
+- 動態網頁：內容可變動、需要後端伺服器
+  - 例如：Facebook、網路銀行
+- 靜態網頁適合用 GitHub Pages 部署
 
 {{% /section %}}
