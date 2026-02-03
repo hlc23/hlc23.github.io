@@ -18,35 +18,27 @@ weight = 50
 
 ---
 
-## GitHub Pages 的優點
+## 部署步驟
 
-<ul>
-<li class="fragment">🆓 完全免費</li>
-<li class="fragment">⚡ 快速部署</li>
-<li class="fragment">🔒 HTTPS 支援</li>
-<li class="fragment">🌍 全球 CDN 加速</li>
-<li class="fragment">📝 可以綁定自己的網域</li>
-</ul>
+### 1. 建立 GitHub Repository
+1. 登入你的 GitHub 帳號
+2. 點選右上角的 **+**，選擇 **New repository**
+3. Repository name: `my-website`
+4. Create repository
 
 ---
 
-## 部署步驟
-
-### 1. 確認檔案結構
-
-你的 Repository 需要有 `index.html`
-
-```text
-my-first-website/
-├── index.html    ← 必須有這個檔案
-├── style.css
-└── images/
-    └── photo.jpg
-```
+![alt text](img/05/home.png)
 
 ---
 
-## 部署步驟
+![alt text](img/05/new-repo.png)
+
+---
+
+![alt text](img/05/new-repo-button.png)
+
+---
 
 ### 2. 前往 Repository 設定
 
@@ -140,19 +132,8 @@ https://hlc23.github.io/my-first-website/
 ## 更新網站
 
 1. 在本地修改檔案
-2. 在 GitHub Desktop 進行 Commit
-3. Push 到 GitHub
+2. 上傳到 GitHub
 4. 等待 1-2 分鐘，網站自動更新
-
----
-
-## 進階：自訂網域
-
-如果你有自己的網域（例如 `example.com`）
-
-1. 在 GitHub Pages 設定加入 Custom domain
-2. 在網域服務商設定 DNS
-3. 等待 DNS 生效（可能需要 24 小時）
 
 ---
 
@@ -162,7 +143,6 @@ https://hlc23.github.io/my-first-website/
 
 1. 建立一個簡單的網站專案
 2. 建立 GitHub Repository
-3. Commit 並 Push
 4. 啟用 GitHub Pages
 5. 確認網站可以正常訪問
 6. 修改內容並更新網站
@@ -177,50 +157,5 @@ https://hlc23.github.io/my-first-website/
 - 簡短自我介紹
 - 個人照片
 - 連結（GitHub、Email 等）
-- 使用 Flexbox 排版
-- 響應式設計（選修）
-
----
-
-## 響應式設計基礎
-
-讓網站在手機上也好看
-
-```css
-/* 手機版 */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .card {
-        width: 100%;
-    }
-}
-```
-
----
-
-## 📝 複習重點
-
-**GitHub Pages 適用範圍**
-
-- 適合：靜態網站（HTML/CSS/JS）
-- 不適合：需要資料庫的網站
-- 不適合：需要伺服器處理的語言（PHP、Java Spring）
-- 完全免費且支援 HTTPS
-- 最適合個人作品集、文件網站、部落格
-
----
-
-## 📝 複習重點
-
-**更新 GitHub Pages 網站**
-
-- 只需要 Commit 並 Push 到 GitHub
-- GitHub Actions 會自動重新部署
-- 不需要重新設定 Pages
-- 不需要付費或手動上傳
-- 通常 1-2 分鐘內完成更新
 
 {{% /section %}}

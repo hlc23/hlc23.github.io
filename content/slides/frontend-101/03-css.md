@@ -18,47 +18,6 @@ weight = 30
 
 ---
 
-## CSS 三種寫法
-
-1. **內嵌樣式** (Inline)
-2. **內部樣式** (Internal)
-3. **外部樣式** (External) ⭐ 推薦
-
----
-
-## 1. 內嵌樣式 (Inline)
-
-直接寫在 HTML 標籤內
-
-```html
-<p style="color: red; font-size: 20px;">
-    這是紅色文字
-</p>
-```
-
-<p class="fragment" style="color:#fbbf24">⚠️ 不推薦：難以維護</p>
-
----
-
-## 2. 內部樣式 (Internal)
-
-寫在 `<head>` 的 `<style>` 標籤內
-
-```html
-<head>
-    <style>
-        p {
-            color: blue;
-            font-size: 18px;
-        }
-    </style>
-</head>
-```
-
----
-
-## 3. 外部樣式 (External) ⭐
-
 獨立的 `.css` 檔案
 
 ```html
@@ -76,7 +35,7 @@ p {
 }
 ```
 
-<p class="fragment" style="color:#4ade80">✅ 最推薦：方便管理和重複使用</p>
+<p class="fragment" style="color:#4ade80">方便管理和重複使用</p>
 
 ---
 
@@ -99,6 +58,19 @@ selector {
 
 ## CSS 選擇器
 
+<div class="fragment">選擇你想要套用樣式的 HTML 元素</div>
+<div class="fragment">
+
+- 標籤選擇器 (Tag Selector)
+- Class 選擇器 (Class Selector)
+- ID 選擇器 (ID Selector)
+- 組合選擇器 (Combinator Selector)
+
+</div>
+
+
+---
+
 ### 1. 標籤選擇器
 
 ```css
@@ -110,8 +82,6 @@ p {
 選擇所有 `<p>` 標籤
 
 ---
-
-## CSS 選擇器
 
 ### 2. Class 選擇器
 
@@ -128,8 +98,6 @@ p {
 <p class="fragment">💡 使用 <code>.</code> 開頭</p>
 
 ---
-
-## CSS 選擇器
 
 ### 3. ID 選擇器
 
@@ -148,8 +116,6 @@ p {
 
 ---
 
-## CSS 選擇器
-
 ### 4. 組合選擇器
 
 ```css
@@ -157,7 +123,25 @@ p {
 div p {
     color: blue;
 }
+```
 
+```html
+<!-- index.html -->
+<div>
+    <p>這是藍色文字</p>
+    <h3>這是h3</h3>
+</div>
+<p>這不是藍色文字</p>
+```
+
+---
+
+{{< slide transition="none-in" background="#ffffff" >}}
+![alt text](img/03/div_p.png)
+
+---
+
+```css
 /* 選擇多個標籤 */
 h1, h2, h3 {
     font-family: Arial;
@@ -228,24 +212,19 @@ h1, h2, h3 {
 
 ---
 
+##  排版
+
+---
+
 ## CSS 盒子模型 (Box Model)
 
 每個 HTML 元素都是一個「盒子」
 
-```text
-┌─────────────────────────┐
-│       Margin (外距)      │
-│  ┌───────────────────┐  │
-│  │  Border (邊框)    │  │
-│  │  ┌─────────────┐  │  │
-│  │  │ Padding(內距)│  │  │
-│  │  │ ┌─────────┐ │  │  │
-│  │  │ │ Content │ │  │  │
-│  │  │ └─────────┘ │  │  │
-│  │  └─────────────┘  │  │
-│  └───────────────────┘  │
-└─────────────────────────┘
-```
+---
+
+{{< slide background="#ffffff" >}}
+
+<img src="img/03/box.png" height="400">
 
 ---
 
@@ -263,8 +242,6 @@ h1, h2, h3 {
 
 ---
 
-## 簡寫屬性
-
 ```css
 /* 四個方向相同 */
 padding: 20px;
@@ -278,6 +255,10 @@ padding: 10px 20px 15px;
 /* 上 右 下 左 (順時針) */
 padding: 10px 15px 20px 25px;
 ```
+
+---
+
+## 多個物件排版
 
 ---
 
@@ -359,21 +340,6 @@ padding: 10px 15px 20px 25px;
 
 ---
 
-## 交叉軸對齊 (align-items)
-
-```css
-.container {
-    display: flex;
-    height: 300px;
-    align-items: stretch;      /* 拉伸（預設）*/
-    /* align-items: center; */    /* 垂直置中 */
-    /* align-items: flex-start; */ /* 靠上 */
-    /* align-items: flex-end; */   /* 靠下 */
-}
-```
-
----
-
 ## Flex 換行
 
 ```css
@@ -430,7 +396,6 @@ padding: 10px 15px 20px 25px;
 2. 裡面放 3 個卡片 `.card`
 3. 使用 Flexbox 讓卡片水平排列
 4. 卡片之間有適當間距
-5. 每個卡片有背景色、內距和圓角
 
 ---
 

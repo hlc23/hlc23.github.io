@@ -13,7 +13,7 @@ weight = 20
 
 - **H**yper**T**ext **M**arkup **L**anguage
 - 超文本標記語言
-- 定義網頁的**結構**和**內容**
+- 定義網頁的**結構**、**語意**和**內容**
 - 使用「標籤」(tags) 來標記內容
 
 ---
@@ -47,20 +47,13 @@ weight = 20
 <li class="fragment">內容 - 放在標籤之間</li>
 </ul>
 
----
-
-## 特殊標籤：自閉合標籤
-
+<p class="fragment">
 有些標籤不需要結束標籤
-
-```html
-<br>      <!-- 換行 -->
-<hr>      <!-- 水平線 -->
-<img src="photo.jpg">  <!-- 圖片 -->
-<input type="text">    <!-- 輸入框 -->
-```
+</p>
 
 ---
+
+{{< slide background-transition="none-out" >}}
 
 ## 標題標籤
 
@@ -77,6 +70,12 @@ weight = 20
 
 ---
 
+{{< slide background="#ffffff" >}}
+![alt text](img/02/h1_to_h6.png)
+
+---
+
+{{< slide transition="none-out"  >}}
 ## 段落與文字
 
 ```html
@@ -92,6 +91,29 @@ weight = 20
 
 ---
 
+{{< slide transition="none-in" background="#ffffff" >}}
+![alt text](img/02/text_tags.png)
+
+---
+
+## Comment 註解
+
+```html
+<!-- 這是一個註解 -->
+<p>這段文字會顯示在網頁上</p>
+<!--
+    多行註解
+-->
+```
+
+<div class="fragment">
+
+In VS Code: <span style="color: yellow">Ctrl + /</span> 可以快速加入/移除註解
+
+</div>
+
+---
+
 ## 連結標籤
 
 ```html
@@ -101,9 +123,6 @@ weight = 20
 <!-- 內部頁面 -->
 <a href="/about.html">關於我</a>
 
-<!-- 錨點連結 -->
-<a href="#section1">跳到第一節</a>
-
 <!-- 開新分頁 -->
 <a href="https://github.com" target="_blank">
     GitHub
@@ -112,10 +131,17 @@ weight = 20
 
 ---
 
+{{< slide transition="none-in" background="#ffffff" >}}
+
+<img src="img/02/a_tag.png" height="150"> 
+
+---
+
 ## 圖片標籤
 
 ```html
 <img src="photo.jpg" alt="照片描述">
+<img src="https://http.cat/404.png" alt="範例圖片" width="300" height="200">
 ```
 
 <ul>
@@ -124,6 +150,11 @@ weight = 20
 <li class="fragment"><code>width</code> - 寬度 (選填)</li>
 <li class="fragment"><code>height</code> - 高度 (選填)</li>
 </ul>
+
+---
+
+{{< slide transition="none-in" background="#ffffff" >}}
+![alt text](img/02/img_tag.png)
 
 ---
 
@@ -147,6 +178,11 @@ weight = 20
 
 ---
 
+{{< slide transition="none-in" background="#ffffff" >}}
+![alt text](img/02/list.png)
+
+---
+
 ## 容器標籤
 
 ```html
@@ -160,40 +196,10 @@ weight = 20
 <p>這是<span style="color:red">紅色</span>文字</p>
 ```
 
----
-
-## 語意化標籤 (HTML5)
-
-```html
-<header>頁首</header>
-<nav>導航列</nav>
-<main>
-    <article>文章內容</article>
-    <section>章節</section>
-</main>
-<aside>側邊欄</aside>
-<footer>頁尾</footer>
-```
-
-<p class="fragment">💡 使用語意化標籤讓程式碼更易讀</p>
-
----
-
-## 表單元素
-
-```html
-<form>
-    <label for="name">姓名：</label>
-    <input type="text" id="name" name="name">
-    
-    <label for="email">Email：</label>
-    <input type="email" id="email" name="email">
-    
-    <textarea name="message"></textarea>
-    
-    <button type="submit">送出</button>
-</form>
-```
+<div class="fragment">
+💡 div 和 span 本身沒有任何樣式或語意，主要用來包裝內容  
+    但可以用 CSS 來為它們添加樣式
+</div>
 
 ---
 
@@ -207,13 +213,22 @@ weight = 20
 - `id` - 唯一識別碼
 - `class` - 類別名稱（可重複）
 - `style` - 內嵌樣式
-- `title` - 提示文字
 - `src` - 來源
 - `href` - 連結
 
 ---
 
 ## 🎯 實作練習 1
+
+<div class="fragment">
+
+![alt text](img/02/who_r_u.png)
+
+</div>
+
+---
+
+
 
 建立一個簡單的自我介紹頁面，包含：
 
@@ -222,7 +237,6 @@ weight = 20
 3. 一個段落 `<p>` 介紹自己
 4. 一個列表 `<ul>` 列出 3 個興趣
 5. 一個連結 `<a>` 到你的社群媒體
-
 ---
 
 ## 🎯 練習解答範例
@@ -248,31 +262,5 @@ weight = 20
 </body>
 </html>
 ```
-
----
-
-## 📝 複習重點
-
-**HTML 超連結**
-
-- 使用 `<a>` 標籤建立超連結
-- `href` 屬性指定連結目標
-- 可以連結到外部網站、內部頁面或錨點
-- 使用 `target="_blank"` 在新分頁開啟
-- `<link>` 標籤用於連結 CSS，不是超連結
-
----
-
-## 📝 複習重點
-
-**容器標籤的差異**
-
-- `<div>` 是區塊元素（block-level）
-  - 會佔滿整行
-  - 前後會自動換行
-- `<span>` 是行內元素（inline）
-  - 不會換行
-  - 只佔內容寬度
-- 選擇使用哪個取決於排版需求
 
 {{% /section %}}
