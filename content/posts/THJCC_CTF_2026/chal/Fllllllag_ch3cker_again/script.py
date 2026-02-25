@@ -1,0 +1,73 @@
+local_67 = """
+  local_67[0] = 0x54;
+  local_67[1] = 0x68;
+  local_67[2] = 0x31;
+  local_67[3] = 0x73;
+  local_67[4] = 0x5f;
+  local_67[5] = 0x31;
+  local_67[6] = 0x73;
+  local_67[7] = 0x5f;
+  local_67[8] = 0x74;
+  local_67[9] = 0x68;
+  local_67[10] = 0x33;
+  local_67[0xb] = 0x5f;
+  local_67[0xc] = 0x6b;
+  local_67[0xd] = 0x33;
+  local_67[0xe] = 0x79;
+  local_67[0xf] = 0;
+  local_67[0x10] = 32;
+  local_67[0x11] = 123;
+  local_67[0x12] = 0x30;
+  local_67[0x13] = 0x1c;
+  local_67[0x14] = 0x4a;
+  local_67[0x15] = 0x32;
+  local_67[0x16] = 0;
+  local_67[0x17] = 0x27;
+  local_67[0x18] = 1;
+  local_67[0x19] = 0x5e;
+  local_67[0x1a] = 0x2f;
+  local_67[0x1b] = 7;
+  local_67[0x1c] = 0;
+  local_67[0x1d] = 0x26;
+  local_67[0x1e] = 6;
+  local_67[0x1f] = 0x5b;
+  local_67[0x20] = 0x47;
+  local_67[0x21] = 0x40;
+  local_67[0x22] = 0x2d;
+  local_67[0x23] = 2;
+  local_67[0x24] = 0x2c;
+  local_67[0x25] = 0x2a;
+  local_67[0x26] = 7;
+  local_67[0x27] = 1;
+  local_67[0x28] = 0x5d;
+  local_67[0x29] = 0x38;
+  local_67[0x2a] = 0x34;
+  local_67[0x2b] = 0x70;
+  local_67[0x2c] = 0x29;
+  local_67[0x2d] = 4;
+  local_67[0x2e] = 0x37;
+  local_67[0x2f] = 0x55;
+  local_67[0x30] = 0x43;
+  local_67[0x31] = 0x36;
+  local_67[0x32] = 0x5f;
+  local_67[0x33] = 0x14;
+  local_67[0x34] = 0;
+  local_67[0x35] = 0x2c;
+  local_67[0x36] = 0x58;
+  local_67[0x37] = 0x61;
+  local_67[0x38] = 0x22;
+"""
+
+plaintext = ""
+cyphertext = []
+
+for line in local_67.splitlines():
+    if "=" in line:
+        var_name, value = line.split("=", 1)
+        value = value.strip().replace(";", "")
+        cyphertext.append(int(value, 16))
+
+for i in range(42):
+    tmp = cyphertext[i % 15] ^ cyphertext[i + 15]
+    plaintext += chr(tmp)
+print("Plaintext:", plaintext)
