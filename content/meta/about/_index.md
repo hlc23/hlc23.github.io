@@ -13,8 +13,6 @@ Hi, hlc23 是我, 也可以叫我 lee
 
 - Cyber Security
     - Web
-    - Pwn
-    - Rev
     - Pentest
 - Game dev
 - Backend
